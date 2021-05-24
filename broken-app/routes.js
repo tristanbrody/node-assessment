@@ -18,7 +18,7 @@ router.post('', async function (req, res, next) {
 				res.json(response);
 			});
 	} catch {
-		res.json({ message: 'Error' });
+		return next(err);
 	}
 });
 
